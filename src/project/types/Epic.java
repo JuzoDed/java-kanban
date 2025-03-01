@@ -1,6 +1,5 @@
-package taskmanager.taskstypes;
-import taskmanager.taskstypes.Subtask;
-import taskmanager.TaskManager;
+package project.types;
+import project.TaskManager;
 
 public class Epic extends Task {
     static int epicNumber = 0;

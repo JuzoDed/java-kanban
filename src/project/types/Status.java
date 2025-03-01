@@ -1,4 +1,4 @@
-package taskmanager.taskstypes;
+package project.types;
 
 public enum Status {
     NEW,

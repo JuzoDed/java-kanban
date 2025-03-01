@@ -1,8 +1,8 @@
-package taskmanager;
+package project;
 
-import taskmanager.taskstypes.Epic;
-import taskmanager.taskstypes.Subtask;
-import taskmanager.taskstypes.Task;
+import project.types.Epic;
+import project.types.Subtask;
+import project.types.Task;
 
 import java.util.ArrayList;
 import java.util.HashMap;

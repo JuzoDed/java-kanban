@@ -1,4 +1,4 @@
-package taskmanager.taskstypes;
+package project.types;
 
 public class Subtask extends Epic {
     private int id;

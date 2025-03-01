@@ -1,4 +1,4 @@
-package taskmanager.taskstypes;
+package project.types;
 
 import java.util.Objects;
 
