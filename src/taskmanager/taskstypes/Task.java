@@ -1,11 +1,13 @@
+package taskmanager.taskstypes;
+
 import java.util.Objects;
 
 public class Task {
     static int taskNumber = 0;
-    protected String title;
-    protected String description;
+    public String title;
+    public String description;
     private int id;
-    Status status;
+    public Status status;
 
     public int getId() {
         return id;
@@ -40,7 +42,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
+        return "taskmanager.taskstypes.Task{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +

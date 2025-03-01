@@ -1,12 +1,16 @@
-import java.sql.SQLOutput;
+package taskmanager;
+
+import taskmanager.taskstypes.Epic;
+import taskmanager.taskstypes.Subtask;
+import taskmanager.taskstypes.Task;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class TaskManager {
     HashMap<Integer, Task> tasks = new HashMap<>();
     HashMap<Integer, Epic> epics = new HashMap<>();
-    static HashMap<Integer, Subtask> subtasks = new HashMap<>();
+    public static HashMap<Integer, Subtask> subtasks = new HashMap<>();
 
     public void addNewTask(Task newTask) {
         Task task = new Task(newTask.title, newTask.description, newTask.status);

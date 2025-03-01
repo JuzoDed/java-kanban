@@ -1,7 +1,9 @@
+package taskmanager.taskstypes;
+
 public class Subtask extends Epic {
     private int id;
     private int epicId;
-    Epic epic;
+    public Epic epic;
 
     public Subtask(String title, String description, Epic epic, Status status) {
         super(title, description, status);
@@ -31,7 +33,7 @@ public class Subtask extends Epic {
     }
 
     public String toString() {
-        return "Subtask{" +
+        return "taskmanager.taskstypes.Subtask{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +

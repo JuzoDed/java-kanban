@@ -1,8 +1,10 @@
-import java.util.ArrayList;
+package taskmanager.taskstypes;
+import taskmanager.taskstypes.Subtask;
+import taskmanager.TaskManager;
 
 public class Epic extends Task {
     static int epicNumber = 0;
-    protected int subtaskNumber;
+    public int subtaskNumber;
     private int id;
 
     public Epic(String title, String description, Status status) {
@@ -58,7 +60,7 @@ public class Epic extends Task {
     }
 
     public String toString() {
-        return "Epic{" +
+        return "taskmanager.taskstypes.Epic{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
