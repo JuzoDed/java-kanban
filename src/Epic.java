@@ -8,7 +8,7 @@ public class Epic extends Task {
     public Epic(String title, String description, Status status) {
         super(title, description, status);
         subtaskNumber = 0;
-        status = Status.NEW;
+        this.status = status;
     }
 
     public void statusChek() {
