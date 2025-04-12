@@ -1,5 +1,5 @@
 package project.types;
-import project.TaskManager;
+import project.managers.InMemoryTaskManager;
 
 public class Epic extends Task {
     static int epicNumber = 0;
@@ -18,17 +18,20 @@ public class Epic extends Task {
         int done = 0;
         for (int i = 1; i < subtaskNumber + 1; i++) {
             String hash = "3" + id + "0" + i;
-            if (TaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.NEW) {
+            if (InMemoryTaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.NEW) {
                 newTask++;
-            } else if (TaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.IN_PROGRESS) {
+            } else if (InMemoryTaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.IN_PROGRESS) {
                 inProgress++;
-            } else if (TaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.DONE) {
+            } else if (InMemoryTaskManager.subtasks.get(Integer.parseInt(hash)).status == Status.DONE) {
                 done++;
             }
         }
-        if (done == subtaskNumber) status = Status.DONE;
-        else if (inProgress > 0) status = Status.IN_PROGRESS;
-        else status = Status.NEW;
+        if (done != subtaskNumber) {
+            if (inProgress > 0) status = Status.IN_PROGRESS;
+            else status = Status.DONE;
+        } else {
+            status = Status.NEW;
+        }
     }
 
     @Override
