@@ -9,11 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
     Task task = new Task("1", "11", Status.NEW);
-    @BeforeAll
-    static void beforeAll() {
-
-
-    }
 
     @Test
     void getId() {
